@@ -1,0 +1,16 @@
+#bodyWrapper {
+    max-width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+#bodyWrapper > nav {
+    flex: 0 0 56px;
+    overflow: hidden;
+}
+#mapWrapper {
+    flex: 1 0 auto;
+    overflow: hidden;
+}
+#map { height: calc(100vh - 56px); }

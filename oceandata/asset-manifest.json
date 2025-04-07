@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/oceandata/static/css/main.f40a5bd4.css",
+    "main.js": "/oceandata/static/js/main.277e1889.js",
+    "static/js/453.93657e9a.chunk.js": "/oceandata/static/js/453.93657e9a.chunk.js",
+    "static/media/oceanpic2.jpg": "/oceandata/static/media/oceanpic2.7b53e39c3a558b0cf59b.jpg",
+    "static/media/CX.png": "/oceandata/static/media/CX.5911f6e59fcae442f1c7.png",
+    "static/media/AUS.png": "/oceandata/static/media/AUS.8885bedce63fc7a59960.png",
+    "static/media/NF.png": "/oceandata/static/media/NF.fe791a424a5602b6d2ad.png",
+    "static/media/ASM.png": "/oceandata/static/media/ASM.d52326ed312bd6aec8a3.png",
+    "static/media/TV.png": "/oceandata/static/media/TV.3b12ec14da07f8b0295c.png",
+    "static/media/KIR.png": "/oceandata/static/media/KIR.cd8d2c3694ff1663125a.png",
+    "static/media/FJI.png": "/oceandata/static/media/FJI.880b7ecedc3ccdd35826.png",
+    "static/media/SLB.png": "/oceandata/static/media/SLB.be5e0e99e9db139ca46c.png",
+    "static/media/COK.png": "/oceandata/static/media/COK.28873a942facabe38b17.png",
+    "static/media/MHL.png": "/oceandata/static/media/MHL.6ce7e8eb04a159ab88df.png",
+    "static/media/PNG.png": "/oceandata/static/media/PNG.214ef5b0744fc2dd3479.png",
+    "static/media/VUT.png": "/oceandata/static/media/VUT.803301d4b8072aa2077f.png",
+    "static/media/NZL.png": "/oceandata/static/media/NZL.75097f671a7af05258a0.png",
+    "static/media/GUM.png": "/oceandata/static/media/GUM.9669283d35f9bd56252f.png",
+    "static/media/NIU.png": "/oceandata/static/media/NIU.c3e6fa63d835297949cd.png",
+    "static/media/TKL.png": "/oceandata/static/media/TKL.b5a8d862246ab668576e.png",
+    "static/media/FSM.png": "/oceandata/static/media/FSM.fa5a34d2000dee8802ed.png",
+    "static/media/PYF.png": "/oceandata/static/media/PYF.528481bd0f5cd60e84c8.png",
+    "static/media/spclogo.png": "/oceandata/static/media/spclogo.6ec4745f4d54aaa20db0.png",
+    "static/media/add.png": "/oceandata/static/media/add.ab81efbfc6d8fae35e9b.png",
+    "static/media/spritesheet.svg": "/oceandata/static/media/spritesheet.a4e0eb7ad904a4858361.svg",
+    "index.html": "/oceandata/index.html",
+    "main.f40a5bd4.css.map": "/oceandata/static/css/main.f40a5bd4.css.map",
+    "main.277e1889.js.map": "/oceandata/static/js/main.277e1889.js.map",
+    "453.93657e9a.chunk.js.map": "/oceandata/static/js/453.93657e9a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f40a5bd4.css",
+    "static/js/main.277e1889.js"
+  ]
+}
