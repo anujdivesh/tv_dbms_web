@@ -66,7 +66,11 @@ function App() {
       <Router>
         <div>
           <Navbar expand="lg" bg={"navbar navbar-expand-sm navbar-custom"} variant={"dark"} style={{paddingRight:"1%",paddingLeft:"1%"}}>
-            <img src={require('./assets/images/TV.png')} alt='logo' style={{marginLeft:'-0.7%',marginTop:'-0.7%',marginBottom:'-0.7%', width:"80px", height:"45px"}}/>
+          <img src={require('./images/spx.png')} alt='logo' style={{width:"85px", height:"50px",marginLeft:'-15px'}}/>
+          <img src={require('./images/tv.png')} alt='logo' style={{width:"50px", height:"50px",marginTop:"-2px",marginLeft:'3px'}}/>
+          <img src={require('./images/UNDPlogo.png')} alt='logo' style={{width:"31px", height:"50px",marginLeft:'3px'}}/>
+          <img src={require('./images/tcap.png')} alt='logo' style={{width:"50px", height:"50px", marginTop:"-3px",marginLeft:'3px'}}/>
+          <img src={require('./images/GCFLogo.png')} alt='logo' style={{width:"80px", height:"50px",marginLeft:'3px'}}/>
             <Navbar.Brand as={Link} to={"/oceandata"}>
               &nbsp;Data Management System
             </Navbar.Brand>
@@ -79,7 +83,6 @@ function App() {
                     <Nav.Link as={Link} to={"/oceandata/metadata"}>Metadata</Nav.Link>
                     <NavDropdown title="Manage" id="basic-nav-dropdown">
                       <NavDropdown.Item as={Link} to={"/oceandata/contact"}>Contact</NavDropdown.Item>
-                      <NavDropdown.Item as={Link} to={"/oceandata/country"}>Country</NavDropdown.Item>
                       <NavDropdown.Item as={Link} to={"/oceandata/bounding_box"}>Bounding Box</NavDropdown.Item>
                       <NavDropdown.Item as={Link} to={"/oceandata/data_type"}>Data Type</NavDropdown.Item>
                       <NavDropdown.Item as={Link} to={"/oceandata/keyword"}>Keyword</NavDropdown.Item>

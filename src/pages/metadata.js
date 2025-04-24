@@ -857,7 +857,9 @@ const Metadata = () => {
               </>
             ) : 'Submit Metadata'}
           </Button>
-        </div>
+        </div><br/>
+        {error && <Alert variant="danger">{error}</Alert>}
+      {success && <Alert variant="success">Metadata submitted successfully!</Alert>}
       </Form>
     </Container>
   );

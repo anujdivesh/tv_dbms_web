@@ -68,8 +68,8 @@ const Home = () => {
   const [obsSource, setobsSource] =useState([]);
   const [parameter, setParameter]  = useState([{key:'%',label:"%"}]);
   const [parameterlist,setParameterlist] = useState([]);
-  const [country, setCountry]  = useState();
-  const [countrylist,setCountrylist] = useState([]);
+  const [country, setCountry]  = useState('%');
+  const [countrylist, setCountrylist] = useState([]);
   const [datatype, setDatatype]  = useState();
   const [datatypelist,setDatatypelist] = useState([]);
   const [project, setProject]  = useState('');
@@ -264,7 +264,7 @@ const Home = () => {
         if(response.status === 200){
           var temp=[]
           for (var i =0; i <data.length; i++){
-            temp.push({key:data[i].name, label:data[i].name})
+            temp.push({key:data[i].id, label:data[i].name})
           }
             //check the api call is success by stats code 200,201 ...etc
             setTaglist(temp)
@@ -294,11 +294,12 @@ const Home = () => {
       .then((response) => {
         const { data } = response;
         if(response.status === 200){
-            //check the api call is success by stats code 200,201 ...etc
-            setCountrylist(data)
-            
-        }else{
-            //error handle section 
+          setCountrylist(data);
+          // Set first country as default if country is still at default value
+          if (country === '%' && data.length > 0) {
+            setCountry(data[0].short_name);
+            countryref.current = data[0].short_name;
+          }
         }
       })
       .catch((error) => console.log(error));
@@ -892,6 +893,12 @@ mapContainer.current.on(L.Draw.Event.CREATED, function(e) {
 */
   }
 
+  useEffect(() => {
+    if (countrylist.length > 0) {
+      setCountry(countrylist[0].short_name);
+    }
+  }, [countrylist]); // This will run whenever countrylist changes
+
   useEffect(() => {  
 
       if (_isMounted.current){
@@ -933,26 +940,25 @@ mapContainer.current.on(L.Draw.Event.CREATED, function(e) {
       <div className="row" style={{marginTop:'0px'}}>
     <div className="col-sm-4">
     <div className="form-group form-select-sm" style={{textAlign:'left'}}>
-      <label htmlFor="exampleInputEmail1">Country</label> <span style={{ color: 'red' }}>*</span>
-      <select  className="form-select form-select-sm"  id="exampleInputEmail2" aria-label=".form-select-sm example"
-              disabled={false}
-              value={country}
-              onChange={(e) => {
-                countryref.current = e.currentTarget.value;
-                fitbbox(mapContainermain.current, mayFlyer(e.currentTarget.value))
-                setCountry(e.currentTarget.value)
-                e.currentTarget.blur();}}
-                
-                
-          >
-            <option value="%">-- Select --</option>
-              {countrylist.map((item) => (
-              <option key={item.short_name} value={item.short_name}>
-                  {item.long_name}
-              </option>
-              ))}
-          </select>
-    </div>
+  <label htmlFor="exampleInputEmail1">Country</label> <span style={{ color: 'red' }}>*</span>
+  <select className="form-select form-select-sm" id="exampleInputEmail2" aria-label=".form-select-sm example"
+    disabled={false}
+    value={country}
+    onChange={(e) => {
+      countryref.current = e.currentTarget.value;
+      fitbbox(mapContainermain.current, mayFlyer(e.currentTarget.value));
+      setCountry(e.currentTarget.value);
+      e.currentTarget.blur();
+    }}
+  >
+    {/* Remove the default "-- Select --" option since we have a default selection */}
+    {countrylist.map((item) => (
+      <option key={item.short_name} value={item.short_name}>
+        {item.long_name}
+      </option>
+    ))}
+  </select>
+</div>
       </div>
       <div className="col-sm-4">
       <div className="form-group form-select-sm" style={{textAlign:'left'}}>
